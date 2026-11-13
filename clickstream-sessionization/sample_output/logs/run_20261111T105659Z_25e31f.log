@@ -1,0 +1,25 @@
+{"ts":"2026-11-11T10:56:59.524Z","level":"INFO","run_id":"run_20261111T105659Z_25e31f","msg":"run run_20261111T105659Z_25e31f started (gap=1800s, mode=per_file, reference_time=2026-12-31T00:00:00.000Z, force=False)"}
+{"ts":"2026-11-11T10:56:59.526Z","level":"INFO","run_id":"run_20261111T105659Z_25e31f","msg":"users loaded from users.csv: {'rows': 25, 'loaded': 25, 'invalid': 0, 'duplicates': 0, 'bad_signup_ts': 0}"}
+{"ts":"2026-11-11T10:56:59.533Z","level":"INFO","run_id":"run_20261111T105659Z_25e31f","msg":"loaded data/sample/input/events/events_batch_001.csv: read=213 inserted=204 duplicate=2 already_loaded=0 rejected=7 users_recomputed=25 sessions_written=42"}
+{"ts":"2026-11-11T10:56:59.542Z","level":"INFO","run_id":"run_20261111T105659Z_25e31f","msg":"loaded data/sample/input/events/events_batch_002.csv: read=213 inserted=196 duplicate=12 already_loaded=0 rejected=5 users_recomputed=23 sessions_written=84"}
+{"ts":"2026-11-11T10:56:59.544Z","level":"INFO","run_id":"run_20261111T105659Z_25e31f","msg":"check pk_unique_events                   PASS (observed=0)"}
+{"ts":"2026-11-11T10:56:59.544Z","level":"INFO","run_id":"run_20261111T105659Z_25e31f","msg":"check pk_unique_sessions                 PASS (observed=0)"}
+{"ts":"2026-11-11T10:56:59.544Z","level":"INFO","run_id":"run_20261111T105659Z_25e31f","msg":"check required_fields_not_null           PASS (observed=0)"}
+{"ts":"2026-11-11T10:56:59.544Z","level":"INFO","run_id":"run_20261111T105659Z_25e31f","msg":"check ri_events_users                    PASS (observed=0)"}
+{"ts":"2026-11-11T10:56:59.544Z","level":"INFO","run_id":"run_20261111T105659Z_25e31f","msg":"check ri_sessions_users                  PASS (observed=0)"}
+{"ts":"2026-11-11T10:56:59.544Z","level":"INFO","run_id":"run_20261111T105659Z_25e31f","msg":"check every_event_sessionized            PASS (observed=0)"}
+{"ts":"2026-11-11T10:56:59.544Z","level":"INFO","run_id":"run_20261111T105659Z_25e31f","msg":"check no_orphan_session_events           PASS (observed=0)"}
+{"ts":"2026-11-11T10:56:59.544Z","level":"INFO","run_id":"run_20261111T105659Z_25e31f","msg":"check session_event_count_matches        PASS (observed=0)"}
+{"ts":"2026-11-11T10:56:59.544Z","level":"INFO","run_id":"run_20261111T105659Z_25e31f","msg":"check total_events_reconcile             PASS (observed=0)"}
+{"ts":"2026-11-11T10:56:59.544Z","level":"INFO","run_id":"run_20261111T105659Z_25e31f","msg":"check session_bounds_match_events        PASS (observed=0)"}
+{"ts":"2026-11-11T10:56:59.544Z","level":"INFO","run_id":"run_20261111T105659Z_25e31f","msg":"check duration_consistent                PASS (observed=0)"}
+{"ts":"2026-11-11T10:56:59.544Z","level":"INFO","run_id":"run_20261111T105659Z_25e31f","msg":"check intra_session_gap_within_limit     PASS (observed=0)"}
+{"ts":"2026-11-11T10:56:59.544Z","level":"INFO","run_id":"run_20261111T105659Z_25e31f","msg":"check inter_session_gap_exceeds_limit    PASS (observed=0)"}
+{"ts":"2026-11-11T10:56:59.544Z","level":"INFO","run_id":"run_20261111T105659Z_25e31f","msg":"check sessions_use_current_gap           PASS (observed=0)"}
+{"ts":"2026-11-11T10:56:59.544Z","level":"INFO","run_id":"run_20261111T105659Z_25e31f","msg":"check no_pending_sessionization          PASS (observed=0)"}
+{"ts":"2026-11-11T10:56:59.544Z","level":"INFO","run_id":"run_20261111T105659Z_25e31f","msg":"check user_session_seq_contiguous        PASS (observed=0)"}
+{"ts":"2026-11-11T10:56:59.544Z","level":"INFO","run_id":"run_20261111T105659Z_25e31f","msg":"check rejects_traceable                  PASS (observed=0)"}
+{"ts":"2026-11-11T10:56:59.544Z","level":"INFO","run_id":"run_20261111T105659Z_25e31f","msg":"check file_counts_reconcile              PASS (observed=0)"}
+{"ts":"2026-11-11T10:56:59.544Z","level":"INFO","run_id":"run_20261111T105659Z_25e31f","msg":"check file_rejects_persisted             PASS (observed=0)"}
+{"ts":"2026-11-11T10:56:59.544Z","level":"INFO","run_id":"run_20261111T105659Z_25e31f","msg":"check file_inserts_persisted             PASS (observed=0)"}
+{"ts":"2026-11-11T10:56:59.547Z","level":"INFO","run_id":"run_20261111T105659Z_25e31f","msg":"run run_20261111T105659Z_25e31f finished: SUCCESS in 0.02s (no failures)"}

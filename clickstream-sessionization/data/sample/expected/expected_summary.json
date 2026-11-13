@@ -1,0 +1,38 @@
+{
+  "generator_config": {
+    "n_users": 25,
+    "n_events": 400,
+    "seed": 42,
+    "n_batches": 2,
+    "start": "2026-11-01T00:00:00Z",
+    "session_gap_seconds": 1800,
+    "duplicate_rate": 0.03,
+    "conflict_rate": 0.005,
+    "late_rate": 0.04,
+    "invalid_rate": 0.03,
+    "local_shuffle_rate": 0.05
+  },
+  "files": [
+    "events_batch_001.csv",
+    "events_batch_002.csv"
+  ],
+  "users": 25,
+  "total_input_rows": 426,
+  "expected_valid_unique_events": 400,
+  "expected_sessions": 88,
+  "expected_quarantined_rows": 26,
+  "expected_quarantine_by_reason": {
+    "DUPLICATE_CONFLICT": 2,
+    "DUPLICATE_EXACT": 12,
+    "EVENT_TS_OUT_OF_RANGE": 1,
+    "FUTURE_EVENT_TS": 1,
+    "INVALID_EVENT_ID": 1,
+    "INVALID_EVENT_TS": 2,
+    "INVALID_USER_REF": 1,
+    "MALFORMED_ROW": 1,
+    "MISSING_EVENT_TS": 2,
+    "MISSING_REQUIRED_FIELD": 2,
+    "UNKNOWN_EVENT_TYPE": 1
+  },
+  "late_events_injected": 11
+}

@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+output/
+data/large/
+data/xlarge/
+sample_output/warehouse.db*
+*.db-wal
+*.db-shm
+.DS_Store

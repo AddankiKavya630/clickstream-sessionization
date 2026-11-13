@@ -1,0 +1,280 @@
+{
+  "run_id": "run_20261111T105659Z_25e31f",
+  "status": "SUCCESS",
+  "exit_code": 0,
+  "started_at": "2026-11-11T10:56:59.519Z",
+  "ended_at": "2026-11-11T10:56:59.544Z",
+  "failure_reason": null,
+  "metrics": {
+    "duration_seconds": 0.0249,
+    "files_processed": 2,
+    "files_skipped": 0,
+    "files_failed": 0,
+    "files_rejected": 0,
+    "input_rows": 426,
+    "events_inserted": 400,
+    "duplicate_rows": 14,
+    "already_loaded_rows": 0,
+    "rejected_rows": 12,
+    "users_recomputed": 48,
+    "sessions_written": 126,
+    "dq_checks_failed": 0,
+    "throughput_rows_per_second": 17134.2,
+    "users_file": {
+      "rows": 25,
+      "loaded": 25,
+      "invalid": 0,
+      "duplicates": 0,
+      "bad_signup_ts": 0
+    },
+    "stage_timings_seconds": {
+      "load_users": 0.001,
+      "ingest_validate_load_sessionize": 0.0161,
+      "sessionize_queued_or_rebuild": 0.0001,
+      "reconciliation_checks": 0.0018,
+      "publish": 0.0017
+    }
+  },
+  "files": [
+    {
+      "source_file": "data/sample/input/events/events_batch_001.csv",
+      "source_file_hash": "cf2a6486c544765cefb291a6a663494f09409a81545a165890387b39f7d53a41",
+      "status": "SUCCESS",
+      "rows_read": 213,
+      "rows_inserted": 204,
+      "rows_duplicate": 2,
+      "rows_already_loaded": 0,
+      "rows_rejected": 7,
+      "users_recomputed": 25,
+      "sessions_written": 42,
+      "schema_warnings": [],
+      "error": null
+    },
+    {
+      "source_file": "data/sample/input/events/events_batch_002.csv",
+      "source_file_hash": "a4a018aaf69c289699297d1679389ffa4efd1ee92e93131b5732ffe883fdd0c5",
+      "status": "SUCCESS",
+      "rows_read": 213,
+      "rows_inserted": 196,
+      "rows_duplicate": 12,
+      "rows_already_loaded": 0,
+      "rows_rejected": 5,
+      "users_recomputed": 23,
+      "sessions_written": 84,
+      "schema_warnings": [],
+      "error": null
+    }
+  ],
+  "dq_checks": [
+    {
+      "name": "pk_unique_events",
+      "status": "PASS",
+      "observed": 0,
+      "expected": 0,
+      "description": "events.event_id is unique"
+    },
+    {
+      "name": "pk_unique_sessions",
+      "status": "PASS",
+      "observed": 0,
+      "expected": 0,
+      "description": "sessions.session_id is unique"
+    },
+    {
+      "name": "required_fields_not_null",
+      "status": "PASS",
+      "observed": 0,
+      "expected": 0,
+      "description": "no NULL required fields in events"
+    },
+    {
+      "name": "ri_events_users",
+      "status": "PASS",
+      "observed": 0,
+      "expected": 0,
+      "description": "every event.user_id exists in dim_users"
+    },
+    {
+      "name": "ri_sessions_users",
+      "status": "PASS",
+      "observed": 0,
+      "expected": 0,
+      "description": "every session.user_id exists in dim_users"
+    },
+    {
+      "name": "every_event_sessionized",
+      "status": "PASS",
+      "observed": 0,
+      "expected": 0,
+      "description": "every valid event is assigned to exactly one session"
+    },
+    {
+      "name": "no_orphan_session_events",
+      "status": "PASS",
+      "observed": 0,
+      "expected": 0,
+      "description": "every session_events row points to an existing session and event"
+    },
+    {
+      "name": "session_event_count_matches",
+      "status": "PASS",
+      "observed": 0,
+      "expected": 0,
+      "description": "sessions.event_count equals the number of mapped events"
+    },
+    {
+      "name": "total_events_reconcile",
+      "status": "PASS",
+      "observed": 0,
+      "expected": 0,
+      "description": "SUM(sessions.event_count) equals COUNT(events)"
+    },
+    {
+      "name": "session_bounds_match_events",
+      "status": "PASS",
+      "observed": 0,
+      "expected": 0,
+      "description": "session start/end equal min/max event time of its events"
+    },
+    {
+      "name": "duration_consistent",
+      "status": "PASS",
+      "observed": 0,
+      "expected": 0,
+      "description": "duration_seconds = (end - start) and is non-negative"
+    },
+    {
+      "name": "intra_session_gap_within_limit",
+      "status": "PASS",
+      "observed": 0,
+      "expected": 0,
+      "description": "no gap inside a session exceeds the inactivity gap"
+    },
+    {
+      "name": "inter_session_gap_exceeds_limit",
+      "status": "PASS",
+      "observed": 0,
+      "expected": 0,
+      "description": "consecutive sessions of a user are separated by more than the gap"
+    },
+    {
+      "name": "sessions_use_current_gap",
+      "status": "PASS",
+      "observed": 0,
+      "expected": 0,
+      "description": "all sessions were computed with the configured gap (else run --rebuild-sessions)"
+    },
+    {
+      "name": "no_pending_sessionization",
+      "status": "PASS",
+      "observed": 0,
+      "expected": 0,
+      "description": "no user is waiting for session recomputation"
+    },
+    {
+      "name": "user_session_seq_contiguous",
+      "status": "PASS",
+      "observed": 0,
+      "expected": 0,
+      "description": "user_session_seq runs 1..n without gaps per user"
+    },
+    {
+      "name": "rejects_traceable",
+      "status": "PASS",
+      "observed": 0,
+      "expected": 0,
+      "description": "every rejected record has source file, hash, line and reason"
+    },
+    {
+      "name": "file_counts_reconcile",
+      "status": "PASS",
+      "observed": 0,
+      "expected": 0,
+      "description": "per file in this run: rows_read = inserted + duplicate + already_loaded + rejected"
+    },
+    {
+      "name": "file_rejects_persisted",
+      "status": "PASS",
+      "observed": 0,
+      "expected": 0,
+      "description": "per successful file: rows_rejected + rows_duplicate equals quarantined rows for that file"
+    },
+    {
+      "name": "file_inserts_persisted",
+      "status": "PASS",
+      "observed": 0,
+      "expected": 0,
+      "description": "per successful file: rows_inserted + rows_already_loaded equals events stored from that file"
+    }
+  ],
+  "warehouse_totals": {
+    "dim_users": 25,
+    "events": 400,
+    "sessions": 88,
+    "rejected_events": 26
+  },
+  "rejects_by_reason_this_run": [
+    {
+      "record_class": "duplicate",
+      "reason_code": "DUPLICATE_CONFLICT",
+      "n": 2
+    },
+    {
+      "record_class": "duplicate",
+      "reason_code": "DUPLICATE_EXACT",
+      "n": 12
+    },
+    {
+      "record_class": "invalid",
+      "reason_code": "EVENT_TS_OUT_OF_RANGE",
+      "n": 1
+    },
+    {
+      "record_class": "invalid",
+      "reason_code": "FUTURE_EVENT_TS",
+      "n": 1
+    },
+    {
+      "record_class": "invalid",
+      "reason_code": "INVALID_EVENT_ID",
+      "n": 1
+    },
+    {
+      "record_class": "invalid",
+      "reason_code": "INVALID_EVENT_TS",
+      "n": 2
+    },
+    {
+      "record_class": "invalid",
+      "reason_code": "INVALID_USER_REF",
+      "n": 1
+    },
+    {
+      "record_class": "invalid",
+      "reason_code": "MALFORMED_ROW",
+      "n": 1
+    },
+    {
+      "record_class": "invalid",
+      "reason_code": "MISSING_EVENT_TS",
+      "n": 2
+    },
+    {
+      "record_class": "invalid",
+      "reason_code": "MISSING_REQUIRED_FIELD",
+      "n": 2
+    },
+    {
+      "record_class": "invalid",
+      "reason_code": "UNKNOWN_EVENT_TYPE",
+      "n": 1
+    }
+  ],
+  "session_kpis": {
+    "sessions": 88,
+    "users": 25,
+    "avg_events_per_session": 4.545,
+    "avg_duration_seconds": 2726.04,
+    "bounce_rate": 0.1932
+  }
+}

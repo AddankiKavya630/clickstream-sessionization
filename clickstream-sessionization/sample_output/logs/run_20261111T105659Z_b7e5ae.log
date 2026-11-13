@@ -1,0 +1,24 @@
+{"ts":"2026-11-11T10:56:59.610Z","level":"INFO","run_id":"run_20261111T105659Z_b7e5ae","msg":"run run_20261111T105659Z_b7e5ae started (gap=1800s, mode=per_file, reference_time=2026-12-31T00:00:00.000Z, force=False)"}
+{"ts":"2026-11-11T10:56:59.610Z","level":"INFO","run_id":"run_20261111T105659Z_b7e5ae","msg":"users loaded from users.csv: {'rows': 25, 'loaded': 25, 'invalid': 0, 'duplicates': 0, 'bad_signup_ts': 0}"}
+{"ts":"2026-11-11T10:56:59.612Z","level":"INFO","run_id":"run_20261111T105659Z_b7e5ae","msg":"loaded sample_output/demo_late_batch/events_batch_late.csv: read=2 inserted=1 duplicate=0 already_loaded=0 rejected=1 users_recomputed=1 sessions_written=2"}
+{"ts":"2026-11-11T10:56:59.614Z","level":"INFO","run_id":"run_20261111T105659Z_b7e5ae","msg":"check pk_unique_events                   PASS (observed=0)"}
+{"ts":"2026-11-11T10:56:59.614Z","level":"INFO","run_id":"run_20261111T105659Z_b7e5ae","msg":"check pk_unique_sessions                 PASS (observed=0)"}
+{"ts":"2026-11-11T10:56:59.614Z","level":"INFO","run_id":"run_20261111T105659Z_b7e5ae","msg":"check required_fields_not_null           PASS (observed=0)"}
+{"ts":"2026-11-11T10:56:59.614Z","level":"INFO","run_id":"run_20261111T105659Z_b7e5ae","msg":"check ri_events_users                    PASS (observed=0)"}
+{"ts":"2026-11-11T10:56:59.614Z","level":"INFO","run_id":"run_20261111T105659Z_b7e5ae","msg":"check ri_sessions_users                  PASS (observed=0)"}
+{"ts":"2026-11-11T10:56:59.614Z","level":"INFO","run_id":"run_20261111T105659Z_b7e5ae","msg":"check every_event_sessionized            PASS (observed=0)"}
+{"ts":"2026-11-11T10:56:59.614Z","level":"INFO","run_id":"run_20261111T105659Z_b7e5ae","msg":"check no_orphan_session_events           PASS (observed=0)"}
+{"ts":"2026-11-11T10:56:59.614Z","level":"INFO","run_id":"run_20261111T105659Z_b7e5ae","msg":"check session_event_count_matches        PASS (observed=0)"}
+{"ts":"2026-11-11T10:56:59.614Z","level":"INFO","run_id":"run_20261111T105659Z_b7e5ae","msg":"check total_events_reconcile             PASS (observed=0)"}
+{"ts":"2026-11-11T10:56:59.614Z","level":"INFO","run_id":"run_20261111T105659Z_b7e5ae","msg":"check session_bounds_match_events        PASS (observed=0)"}
+{"ts":"2026-11-11T10:56:59.614Z","level":"INFO","run_id":"run_20261111T105659Z_b7e5ae","msg":"check duration_consistent                PASS (observed=0)"}
+{"ts":"2026-11-11T10:56:59.614Z","level":"INFO","run_id":"run_20261111T105659Z_b7e5ae","msg":"check intra_session_gap_within_limit     PASS (observed=0)"}
+{"ts":"2026-11-11T10:56:59.614Z","level":"INFO","run_id":"run_20261111T105659Z_b7e5ae","msg":"check inter_session_gap_exceeds_limit    PASS (observed=0)"}
+{"ts":"2026-11-11T10:56:59.614Z","level":"INFO","run_id":"run_20261111T105659Z_b7e5ae","msg":"check sessions_use_current_gap           PASS (observed=0)"}
+{"ts":"2026-11-11T10:56:59.614Z","level":"INFO","run_id":"run_20261111T105659Z_b7e5ae","msg":"check no_pending_sessionization          PASS (observed=0)"}
+{"ts":"2026-11-11T10:56:59.614Z","level":"INFO","run_id":"run_20261111T105659Z_b7e5ae","msg":"check user_session_seq_contiguous        PASS (observed=0)"}
+{"ts":"2026-11-11T10:56:59.614Z","level":"INFO","run_id":"run_20261111T105659Z_b7e5ae","msg":"check rejects_traceable                  PASS (observed=0)"}
+{"ts":"2026-11-11T10:56:59.614Z","level":"INFO","run_id":"run_20261111T105659Z_b7e5ae","msg":"check file_counts_reconcile              PASS (observed=0)"}
+{"ts":"2026-11-11T10:56:59.614Z","level":"INFO","run_id":"run_20261111T105659Z_b7e5ae","msg":"check file_rejects_persisted             PASS (observed=0)"}
+{"ts":"2026-11-11T10:56:59.614Z","level":"INFO","run_id":"run_20261111T105659Z_b7e5ae","msg":"check file_inserts_persisted             PASS (observed=0)"}
+{"ts":"2026-11-11T10:56:59.617Z","level":"INFO","run_id":"run_20261111T105659Z_b7e5ae","msg":"run run_20261111T105659Z_b7e5ae finished: SUCCESS in 0.01s (no failures)"}

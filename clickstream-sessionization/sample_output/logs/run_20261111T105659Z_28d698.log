@@ -1,0 +1,24 @@
+{"ts":"2026-11-11T10:56:59.597Z","level":"INFO","run_id":"run_20261111T105659Z_28d698","msg":"run run_20261111T105659Z_28d698 started (gap=1800s, mode=per_file, reference_time=2026-12-31T00:00:00.000Z, force=False)"}
+{"ts":"2026-11-11T10:56:59.598Z","level":"INFO","run_id":"run_20261111T105659Z_28d698","msg":"users loaded from users.csv: {'rows': 25, 'loaded': 25, 'invalid': 0, 'duplicates': 0, 'bad_signup_ts': 0}"}
+{"ts":"2026-11-11T10:56:59.599Z","level":"ERROR","run_id":"run_20261111T105659Z_28d698","msg":"file sample_output/demo_late_batch/events_batch_late.csv FAILED (rolled back, will be retried on next run): FaultInjected: injected fault at stage 'after_insert_events' for events_batch_late.csv"}
+{"ts":"2026-11-11T10:56:59.602Z","level":"INFO","run_id":"run_20261111T105659Z_28d698","msg":"check pk_unique_events                   PASS (observed=0)"}
+{"ts":"2026-11-11T10:56:59.602Z","level":"INFO","run_id":"run_20261111T105659Z_28d698","msg":"check pk_unique_sessions                 PASS (observed=0)"}
+{"ts":"2026-11-11T10:56:59.602Z","level":"INFO","run_id":"run_20261111T105659Z_28d698","msg":"check required_fields_not_null           PASS (observed=0)"}
+{"ts":"2026-11-11T10:56:59.602Z","level":"INFO","run_id":"run_20261111T105659Z_28d698","msg":"check ri_events_users                    PASS (observed=0)"}
+{"ts":"2026-11-11T10:56:59.602Z","level":"INFO","run_id":"run_20261111T105659Z_28d698","msg":"check ri_sessions_users                  PASS (observed=0)"}
+{"ts":"2026-11-11T10:56:59.602Z","level":"INFO","run_id":"run_20261111T105659Z_28d698","msg":"check every_event_sessionized            PASS (observed=0)"}
+{"ts":"2026-11-11T10:56:59.602Z","level":"INFO","run_id":"run_20261111T105659Z_28d698","msg":"check no_orphan_session_events           PASS (observed=0)"}
+{"ts":"2026-11-11T10:56:59.602Z","level":"INFO","run_id":"run_20261111T105659Z_28d698","msg":"check session_event_count_matches        PASS (observed=0)"}
+{"ts":"2026-11-11T10:56:59.602Z","level":"INFO","run_id":"run_20261111T105659Z_28d698","msg":"check total_events_reconcile             PASS (observed=0)"}
+{"ts":"2026-11-11T10:56:59.602Z","level":"INFO","run_id":"run_20261111T105659Z_28d698","msg":"check session_bounds_match_events        PASS (observed=0)"}
+{"ts":"2026-11-11T10:56:59.602Z","level":"INFO","run_id":"run_20261111T105659Z_28d698","msg":"check duration_consistent                PASS (observed=0)"}
+{"ts":"2026-11-11T10:56:59.602Z","level":"INFO","run_id":"run_20261111T105659Z_28d698","msg":"check intra_session_gap_within_limit     PASS (observed=0)"}
+{"ts":"2026-11-11T10:56:59.602Z","level":"INFO","run_id":"run_20261111T105659Z_28d698","msg":"check inter_session_gap_exceeds_limit    PASS (observed=0)"}
+{"ts":"2026-11-11T10:56:59.602Z","level":"INFO","run_id":"run_20261111T105659Z_28d698","msg":"check sessions_use_current_gap           PASS (observed=0)"}
+{"ts":"2026-11-11T10:56:59.602Z","level":"INFO","run_id":"run_20261111T105659Z_28d698","msg":"check no_pending_sessionization          PASS (observed=0)"}
+{"ts":"2026-11-11T10:56:59.602Z","level":"INFO","run_id":"run_20261111T105659Z_28d698","msg":"check user_session_seq_contiguous        PASS (observed=0)"}
+{"ts":"2026-11-11T10:56:59.602Z","level":"INFO","run_id":"run_20261111T105659Z_28d698","msg":"check rejects_traceable                  PASS (observed=0)"}
+{"ts":"2026-11-11T10:56:59.602Z","level":"INFO","run_id":"run_20261111T105659Z_28d698","msg":"check file_counts_reconcile              PASS (observed=0)"}
+{"ts":"2026-11-11T10:56:59.602Z","level":"INFO","run_id":"run_20261111T105659Z_28d698","msg":"check file_rejects_persisted             PASS (observed=0)"}
+{"ts":"2026-11-11T10:56:59.602Z","level":"INFO","run_id":"run_20261111T105659Z_28d698","msg":"check file_inserts_persisted             PASS (observed=0)"}
+{"ts":"2026-11-11T10:56:59.605Z","level":"INFO","run_id":"run_20261111T105659Z_28d698","msg":"run run_20261111T105659Z_28d698 finished: PARTIAL_SUCCESS in 0.01s (sample_output/demo_late_batch/events_batch_late.csv: FAILED (FaultInjected: injected fault at stage 'after_insert_events' for events_batch_late.csv))"}

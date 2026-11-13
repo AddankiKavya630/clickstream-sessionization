@@ -1,0 +1,27 @@
+source_file,source_line,event_id,expected_record_class,expected_reason_code
+events_batch_001.csv,34,evt_bad_000003,invalid,FUTURE_EVENT_TS
+events_batch_001.csv,42,,invalid,MISSING_REQUIRED_FIELD
+events_batch_001.csv,107,bad id #000009,invalid,INVALID_EVENT_ID
+events_batch_001.csv,126,evt_bad_000006,invalid,UNKNOWN_EVENT_TYPE
+events_batch_001.csv,146,evt_bad_000005,invalid,INVALID_USER_REF
+events_batch_001.csv,155,evt_bad_000011,invalid,MISSING_EVENT_TS
+events_batch_001.csv,170,evt_000000150,duplicate,DUPLICATE_EXACT
+events_batch_001.csv,178,evt_000000138,duplicate,DUPLICATE_CONFLICT
+events_batch_001.csv,187,evt_bad_000002,invalid,INVALID_EVENT_TS
+events_batch_002.csv,13,evt_bad_000012,invalid,INVALID_EVENT_TS
+events_batch_002.csv,15,evt_bad_000004,invalid,EVENT_TS_OUT_OF_RANGE
+events_batch_002.csv,29,evt_bad_000010,invalid,MALFORMED_ROW
+events_batch_002.csv,34,evt_bad_000001,invalid,MISSING_EVENT_TS
+events_batch_002.csv,48,evt_bad_000007,invalid,MISSING_REQUIRED_FIELD
+events_batch_002.csv,97,evt_000000228,duplicate,DUPLICATE_EXACT
+events_batch_002.csv,105,evt_000000113,duplicate,DUPLICATE_EXACT
+events_batch_002.csv,114,evt_000000213,duplicate,DUPLICATE_EXACT
+events_batch_002.csv,122,evt_000000290,duplicate,DUPLICATE_EXACT
+events_batch_002.csv,129,evt_000000086,duplicate,DUPLICATE_EXACT
+events_batch_002.csv,133,evt_000000017,duplicate,DUPLICATE_EXACT
+events_batch_002.csv,139,evt_000000059,duplicate,DUPLICATE_CONFLICT
+events_batch_002.csv,150,evt_000000390,duplicate,DUPLICATE_EXACT
+events_batch_002.csv,171,evt_000000043,duplicate,DUPLICATE_EXACT
+events_batch_002.csv,197,evt_000000251,duplicate,DUPLICATE_EXACT
+events_batch_002.csv,203,evt_000000364,duplicate,DUPLICATE_EXACT
+events_batch_002.csv,208,evt_000000016,duplicate,DUPLICATE_EXACT

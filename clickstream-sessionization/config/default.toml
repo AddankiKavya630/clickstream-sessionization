@@ -1,0 +1,32 @@
+# Default pipeline configuration. Every value can be overridden on the CLI.
+
+[sessionization]
+# Inactivity gap. A gap STRICTLY GREATER than this starts a new session;
+# a gap exactly equal to it stays in the same session.
+session_gap_minutes = 30
+
+# "per_file" (default): sessions are rebuilt in the same transaction as each file's events.
+# "per_run": users touched by each file are queued (crash-safe) and rebuilt once at the end
+#            of the run. Faster when one run loads many files for the same users.
+sessionize_mode = "per_file"
+
+[validation]
+# Allowed values of event_type (compared after trim + lower-case).
+allowed_event_types = ["page_view", "click", "search", "add_to_cart", "remove_from_cart", "purchase", "login", "logout"]
+
+# Events later than reference_time + this skew are rejected as FUTURE_EVENT_TS.
+# reference_time defaults to the run start time (override with --reference-time).
+max_future_skew_minutes = 10
+
+# Events earlier than this are rejected as EVENT_TS_OUT_OF_RANGE.
+min_event_ts = "2000-01-01T00:00:00Z"
+
+# Timestamps without a UTC offset: "assume_utc" or "reject".
+naive_timestamp_policy = "assume_utc"
+
+# event_id must match this pattern (and be at most 64 characters).
+event_id_pattern = "^[A-Za-z0-9_\\-:.]{1,64}$"
+
+[input]
+# File extensions picked up when --input points to a directory.
+extensions = [".csv", ".jsonl"]
